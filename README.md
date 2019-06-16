@@ -1,7 +1,7 @@
 # Neon Puzzle Game
 * Author: Joe Davis
 * Project: Doodle Escape
-* Hardware: 2012 15" Macbook Pro Retina Display.
-* Software: Unity
+* Hardware: 2012 15" Macbook Pro Retina Display
+* Software: Unity 2019.1.7f1
 * Platform: PC / Mac
 * Development - In Process

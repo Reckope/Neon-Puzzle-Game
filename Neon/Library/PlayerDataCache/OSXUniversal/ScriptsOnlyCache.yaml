@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - GameManager
+    - MainMenuController
     - SceneSelection
     Unity.PackageManagerUI.Editor.dll:
     - UnityEditor.PackageManager.UI.PackageManagerWindow
@@ -15,6 +16,7 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.AspectRatioFitter
     - UnityEngine.UI.Button
@@ -206,6 +208,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9330}
     - Class: 114
+      Script: {instanceID: 9332}
+    - Class: 114
       Script: {instanceID: 9336}
     - Class: 114
       Script: {instanceID: 9344}
@@ -217,6 +221,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10056}
     - Class: 114
       Script: {instanceID: 10248}
+    - Class: 114
+      Script: {instanceID: 12762}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -933,6 +939,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 50144e27320cd4a2ca116425239222df
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenuController
   platform: 2
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

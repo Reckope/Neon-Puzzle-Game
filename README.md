@@ -5,3 +5,8 @@
 * Software: Unity
 * Platform: PC / Mac
 * Development - In Process
+
+Credits (to be added in game):
+
+* Font: Rocket Rinder by Chequered Ink.
+* Main Menu Music: Space Ambient by Osmic

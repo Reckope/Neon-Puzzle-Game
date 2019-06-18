@@ -29,7 +29,8 @@ public class MainMenuController : MonoBehaviour
 	{
 		HideAllMenuOptions();
 		menuUI = (int)menuOptionsEnum.welcome;
-		menuOptions[menuUI].SetActive(true);
+		DisplayMenuOption(menuUI);
+		//menuOptions[menuUI].SetActive(true);
 	}
 
 	// Each menu button passes over a value to display their respected UI.

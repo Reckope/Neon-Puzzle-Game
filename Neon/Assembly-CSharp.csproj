@@ -56,8 +56,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Game Control\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Game Control\LevelController.cs" />
      <Compile Include="Assets\Scripts\Game Control\MainMenuController.cs" />
      <Compile Include="Assets\Scripts\Game Control\SceneSelection.cs" />
+     <Compile Include="Assets\Scripts\Level.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/JoeDavis/Documents/Unity Projects/Neon/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

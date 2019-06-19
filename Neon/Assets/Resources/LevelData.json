@@ -1,0 +1,67 @@
+{
+	"levels": [
+		{
+			"levelID": "NotOnLevel",
+			"levelName": "No Name",
+			"objective": "Objective",
+			"buildIndex": 0,
+			"isUnlocked": false,
+			"isActive": true,
+			"completed": false
+		},
+		{
+			"levelID": "LevelOne",
+			"levelName": "Getting Along",
+			"objective": "Level One Objective",
+			"buildIndex": 1,
+			"isUnlocked": true,
+			"isActive": false,
+			"completed": false
+		},
+		{
+			"levelID": "LevelTwo",
+			"levelName": "Two is Company",
+			"objective": "Level Two Objective",
+			"buildIndex": 2,
+			"isUnlocked": true,
+			"isActive": false,
+			"completed": false
+		},
+		{
+			"levelID": "LeveThree",
+			"levelName": "Three is a Crowd",
+			"objective": "Level Three Objective",
+			"buildIndex": 3,
+			"isUnlocked": false,
+			"isActive": false,
+			"completed": false
+		},
+		{
+			"levelID": "LevelFour",
+			"levelName": "Level Four Name",
+			"objective": "Level Four Objective",
+			"buildIndex": 4,
+			"isUnlocked": false,
+			"isActive": false,
+			"completed": false
+		},
+		{
+			"levelID": "LevelFive",
+			"levelName": "Level Five Name",
+			"objective": "Level Five Objective",
+			"buildIndex": 5,
+			"isUnlocked": false,
+			"isActive": false,
+			"completed": false
+		},
+		{
+			"levelID": "LevelSix",
+			"levelName": "Level Six Name",
+			"objective": "Level Six Objective",
+			"buildIndex": 6,
+			"isUnlocked": false,
+			"isActive": false,
+			"completed": false
+		}
+	]
+}

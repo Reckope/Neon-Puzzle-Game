@@ -7,11 +7,13 @@
 * Attach this to a level UI button. 
 */
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[Serializable]
 public class Level : MonoBehaviour
 {
 	// Components
@@ -24,29 +26,40 @@ public class Level : MonoBehaviour
 	public Text levelInformation;
 
 	// Global Variables
-	private int level;
-	private bool isUnlocked;
+	public string levelID;
+	public string levelName;
+	public string objective;
+	public int buildIndex;
+	public bool isUnlocked;
+	public bool isActive;
+	public bool completed;
 
 	// ------------------------------------------------------------------------------
 	// During Awake(), the LevelController.cs Initializes each level, and constructs it here.  
-	public void ConstructLevel(int level, bool isUnlocked)
+	public void ConstructLevel(string id, string name, string objective, int buildIndex, bool isUnlocked, bool isActive, bool completed)
 	{
-		this.level = level;
+		this.levelID = id;
+		this.levelName = name;
+		this.objective = objective;
+		this.buildIndex = buildIndex;
 		this.isUnlocked = isUnlocked;
+		this.isActive = isActive;
+		this.completed = completed;
 	}
 
 	void Start()
 	{
+		Debug.Log("Level made: " + isActive);
 		levelButton = GetComponent<Button>();
 		levelImage = GetComponent<Image>();
-		SetLevelData();
+		EnableLevel();
 		levelInformation.text = null;
 	}
 
-	// We then set the level data to determine if the player has access to it.
-	public void SetLevelData()
+	// We then enable the level depending on if it's unlocked or not. 
+	public void EnableLevel()
 	{
-		levelNumberText.text = level.ToString();
+		levelNumberText.text = buildIndex.ToString();
 
 		if(isUnlocked)
 		{
@@ -69,7 +82,7 @@ public class Level : MonoBehaviour
 		{
 			if(this.isUnlocked)
 			{
-				levelInformation.text = this.level.ToString();
+				levelInformation.text = levelName;
 			}
 			else
 			{
@@ -80,5 +93,10 @@ public class Level : MonoBehaviour
 		{
 			Debug.Log("Missing Object Reference: Text levelInformation");
 		}
+	}
+
+	public void HideLevelInformation()
+	{
+		levelInformation.text = null;
 	}
 }

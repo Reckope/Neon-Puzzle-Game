@@ -3,8 +3,9 @@
 * Project: Neon Puzzle Game
 * 2019
 * Notes: 
-* This is used to manage the levels. Data can be loaded from a Json file.
-* Attach this to the object that contains the level buttons.  
+* This is used to load and manage the levels. Data can be loaded from a Json file,
+* and buttons are instantiated to gain access to the levels. 
+* Attach this to an empty gameobject. 
 */
 
 using System;
@@ -15,11 +16,11 @@ using UnityEngine;
 
 // Structure of a Level.
 [Serializable]
-public class LevelStructure
+public struct LevelStructure
 {
 	public string levelID;
 	public string levelName;
-	public string objective;
+	public string description;
 	public int buildIndex;
 	public bool isUnlocked;
 	public bool isActive;
@@ -38,40 +39,65 @@ public class LevelController : MonoBehaviour
 	// Classes
 	LevelDataCollection allLevels;
 
+	// GameObjects
+	public GameObject buttonPrefab;
+	public GameObject canvasParent;
+
 	// Global Variables
-	private int unlockedLevel;
 	private Level[] levelButtons;
 
 	// ------------------------------------------------------------------------------
 	void Awake()
 	{
-		unlockedLevel = 2;
-		levelButtons = GetComponentsInChildren<Level>();
-		
+		LoadLevelDataFromJsonFile();
+		InstantiateLevelButtons();
+		InitializeLevels();
+	}
+
+	// First we load the level data from an external Json file "LevelData". 
+	private void LoadLevelDataFromJsonFile()
+	{
 		TextAsset txtAsset = (TextAsset)Resources.Load("LevelData", typeof(TextAsset));
 		String levelData = txtAsset.text;
 		allLevels = JsonUtility.FromJson<LevelDataCollection>(levelData);
+	}
 
-		InitializeLevels();
-		Debug.Log(allLevels.levels[1].levelID);
+	// We then instantiate level buttons for each level in the json file. Designers can simply
+	// add a level to the file, and this will automatically create a button for it. 
+	private void InstantiateLevelButtons()
+	{
+		int numberOfLevelsInGame = allLevels.levels.Length;
+		Debug.Log(numberOfLevelsInGame);
+		for(int i = 0; i < numberOfLevelsInGame; i++)
+		{
+			if(buttonPrefab != null || canvasParent != null)
+			{
+				GameObject levelButton = Instantiate(buttonPrefab);
+				levelButton.transform.SetParent(canvasParent.transform, false);
+			}
+			else
+			{
+				Debug.Log("Error: Couldn't find button prefab or it's parent canvas.");
+			}
+		}
+		levelButtons = canvasParent.GetComponentsInChildren<Level>();
 	}
 
 	// After obtaining the level data, we construct each level in Level.cs.
-	// Each level button will contain the data for the level it activates. 
+	// Each button will contain the data for the level it activates. 
 	private void InitializeLevels()
 	{
 		for(int i = 0; i < levelButtons.Length; i++)
 		{
-			int level = i + 1;
 			levelButtons[i].gameObject.SetActive(true);
 			levelButtons[i].ConstructLevel(
-				allLevels.levels[level].levelID, 
-				allLevels.levels[level].levelName,
-				allLevels.levels[level].objective,
-				allLevels.levels[level].buildIndex,
-				allLevels.levels[level].isUnlocked,
-				allLevels.levels[level].isActive,
-				allLevels.levels[level].completed
+				allLevels.levels[i].levelID, 
+				allLevels.levels[i].levelName,
+				allLevels.levels[i].description,
+				allLevels.levels[i].buildIndex,
+				allLevels.levels[i].isUnlocked,
+				allLevels.levels[i].isActive,
+				allLevels.levels[i].completed
 			);
 		}
 	}

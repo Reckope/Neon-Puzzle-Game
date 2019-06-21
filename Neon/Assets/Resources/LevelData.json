@@ -1,63 +1,63 @@
 {
 	"levels": [
 		{
-			"levelID": "NotOnLevel",
-			"levelName": "No Name",
-			"objective": "Objective",
+			"levelID": "Tutorial",
+			"levelName": "Tutorial",
+			"description": "Complete tutorial",
 			"buildIndex": 0,
-			"isUnlocked": false,
-			"isActive": true,
+			"isUnlocked": true,
+			"isActive": false,
 			"completed": false
 		},
 		{
-			"levelID": "LevelOne",
+			"levelID": "Level01",
 			"levelName": "Getting Along",
-			"objective": "Level One Objective",
+			"description": "Level One Objective",
 			"buildIndex": 1,
 			"isUnlocked": true,
 			"isActive": false,
 			"completed": false
 		},
 		{
-			"levelID": "LevelTwo",
+			"levelID": "Level02",
 			"levelName": "Two is Company",
-			"objective": "Level Two Objective",
+			"description": "Level Two Objective",
 			"buildIndex": 2,
 			"isUnlocked": true,
 			"isActive": false,
 			"completed": false
 		},
 		{
-			"levelID": "LeveThree",
+			"levelID": "Level03",
 			"levelName": "Three is a Crowd",
-			"objective": "Level Three Objective",
+			"description": "Level Three Objective",
 			"buildIndex": 3,
-			"isUnlocked": false,
+			"isUnlocked": true,
 			"isActive": false,
 			"completed": false
 		},
 		{
-			"levelID": "LevelFour",
+			"levelID": "Level04",
 			"levelName": "Level Four Name",
-			"objective": "Level Four Objective",
+			"description": "Level Four Objective",
 			"buildIndex": 4,
 			"isUnlocked": false,
 			"isActive": false,
 			"completed": false
 		},
 		{
-			"levelID": "LevelFive",
+			"levelID": "Level05",
 			"levelName": "Level Five Name",
-			"objective": "Level Five Objective",
+			"description": "Level Five Objective",
 			"buildIndex": 5,
 			"isUnlocked": false,
 			"isActive": false,
 			"completed": false
 		},
 		{
-			"levelID": "LevelSix",
+			"levelID": "Level06",
 			"levelName": "Level Six Name",
-			"objective": "Level Six Objective",
+			"description": "Level Six Objective",
 			"buildIndex": 6,
 			"isUnlocked": false,
 			"isActive": false,

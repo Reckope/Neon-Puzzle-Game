@@ -4,7 +4,7 @@
 * 2019
 * Notes: 
 * This is used to display the unlocked level and it's data, or disable it if not unlocked yet. 
-* Attach this to a level UI button. 
+* Attach this to a level UI button prefab. 
 */
 
 using System;
@@ -26,21 +26,21 @@ public class Level : MonoBehaviour
 	public Text levelInformation;
 
 	// Global Variables
-	public string levelID;
-	public string levelName;
-	public string objective;
-	public int buildIndex;
-	public bool isUnlocked;
-	public bool isActive;
-	public bool completed;
+	public string levelID { get; set; }
+	public string levelName { get; set; }
+	public string description { get; set; }
+	public int buildIndex { get; set; }
+	public bool isUnlocked { get; set; }
+	public bool isActive { get; set; }
+	public bool completed { get; set; }
 
 	// ------------------------------------------------------------------------------
 	// During Awake(), the LevelController.cs Initializes each level, and constructs it here.  
-	public void ConstructLevel(string id, string name, string objective, int buildIndex, bool isUnlocked, bool isActive, bool completed)
+	public void ConstructLevel(string id, string name, string description, int buildIndex, bool isUnlocked, bool isActive, bool completed)
 	{
 		this.levelID = id;
 		this.levelName = name;
-		this.objective = objective;
+		this.description = description;
 		this.buildIndex = buildIndex;
 		this.isUnlocked = isUnlocked;
 		this.isActive = isActive;
@@ -52,6 +52,7 @@ public class Level : MonoBehaviour
 		Debug.Log("Level made: " + isActive);
 		levelButton = GetComponent<Button>();
 		levelImage = GetComponent<Image>();
+		levelInformation = GameObject.Find("LevelInformation").GetComponentInChildren<Text>();
 		EnableLevel();
 		levelInformation.text = null;
 	}
@@ -59,7 +60,7 @@ public class Level : MonoBehaviour
 	// We then enable the level depending on if it's unlocked or not. 
 	public void EnableLevel()
 	{
-		levelNumberText.text = buildIndex.ToString();
+		levelNumberText.text = levelName;
 
 		if(isUnlocked)
 		{
@@ -82,7 +83,7 @@ public class Level : MonoBehaviour
 		{
 			if(this.isUnlocked)
 			{
-				levelInformation.text = levelName;
+				levelInformation.text = description;
 			}
 			else
 			{

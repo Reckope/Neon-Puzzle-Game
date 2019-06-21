@@ -28,7 +28,7 @@ public class MainMenuController : MonoBehaviour
 	void Start()
 	{
 		HideAllMenuOptions();
-		menuUI = (int)menuOptionsEnum.welcome;
+		menuUI = (int)menuOptionsEnum.selectLevel;
 		DisplayMenuOption(menuUI);
 		//menuOptions[menuUI].SetActive(true);
 	}

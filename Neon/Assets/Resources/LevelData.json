@@ -3,7 +3,7 @@
 		{
 			"levelID": "Tutorial",
 			"levelName": "Tutorial",
-			"description": "Complete tutorial",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt ligula nec lacus faucibus, vitae volutpat mauris egestas. Nam nec blandit enim. Cras faucibus nisi et nunc sagittis consectetur. Nulla ultricies malesuada vestibulum. Donec vitae facilisis ante. Aenean lobortis eleifend dapibus. Vivamus commodo, orci sit amet vulputate pellentesque, nisl enim aliquet neque, et aliquet ipsum sapien eget odio. Vivamus blandit vehicula lacus nec iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet semper purus, eu pretium libero varius venenatis.",
 			"buildIndex": 0,
 			"isUnlocked": true,
 			"isActive": false,
@@ -12,7 +12,7 @@
 		{
 			"levelID": "Level01",
 			"levelName": "Getting Along",
-			"description": "Level One Objective",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt ligula nec lacus faucibus, vitae volutpat mauris egestas. Nam nec blandit enim. Cras faucibus nisi et nunc sagittis consectetur. Nulla ultricies malesuada vestibulum. Donec vitae facilisis ante. Aenean lobortis eleifend dapibus. Vivamus commodo, orci sit amet vulputate pellentesque, nisl enim aliquet neque, et aliquet ipsum sapien eget odio. Vivamus blandit vehicula lacus nec iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet semper purus.",
 			"buildIndex": 1,
 			"isUnlocked": true,
 			"isActive": false,
@@ -20,8 +20,8 @@
 		},
 		{
 			"levelID": "Level02",
-			"levelName": "Two is Company",
-			"description": "Level Two Objective",
+			"levelName": "Two's Company",
+			"description": "Level Two Objective. I have no idea what will go in here, but this is just a placeholder.",
 			"buildIndex": 2,
 			"isUnlocked": true,
 			"isActive": false,
@@ -29,8 +29,8 @@
 		},
 		{
 			"levelID": "Level03",
-			"levelName": "Three is a Crowd",
-			"description": "Level Three Objective",
+			"levelName": "Three's a Crowd",
+			"description": "Level Three! You have learned the ways of the game. Now face your greatest challenge yet.",
 			"buildIndex": 3,
 			"isUnlocked": true,
 			"isActive": false,
@@ -39,7 +39,7 @@
 		{
 			"levelID": "Level04",
 			"levelName": "Level Four Name",
-			"description": "Level Four Objective",
+			"description": "Have you even unlocked this level yet??? Naw didn't think so pal.",
 			"buildIndex": 4,
 			"isUnlocked": false,
 			"isActive": false,
@@ -48,7 +48,7 @@
 		{
 			"levelID": "Level05",
 			"levelName": "Level Five Name",
-			"description": "Level Five Objective",
+			"description": "Nah this level is locked fam.",
 			"buildIndex": 5,
 			"isUnlocked": false,
 			"isActive": false,

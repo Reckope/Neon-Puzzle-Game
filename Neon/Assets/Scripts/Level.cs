@@ -12,6 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class Level : MonoBehaviour
@@ -99,5 +100,17 @@ public class Level : MonoBehaviour
 	public void HideLevelInformation()
 	{
 		levelInformation.text = null;
+	}
+
+	public void StartLevel()
+	{
+		if(Application.CanStreamedLevelBeLoaded(levelID))
+		{
+			SceneManager.LoadScene(levelID);
+		}
+		else
+		{
+			Debug.Log("ERROR: Scene " + levelID + " does not exist.");
+		}
 	}
 }

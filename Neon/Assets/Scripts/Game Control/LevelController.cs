@@ -101,4 +101,16 @@ public class LevelController : MonoBehaviour
 			);
 		}
 	}
+	// WORK IN PROGRESS
+	public void ResetLevelData()
+	{
+		for(int i = 1; i < levelButtons.Length; i++)
+		{
+			allLevels.levels[i].isUnlocked = false;
+		}
+		TextAsset txtAsset = (TextAsset)Resources.Load("LevelData", typeof(TextAsset));
+		String levelData = txtAsset.text;
+		String jsonData = JsonUtility.ToJson(allLevels);
+		File.WriteAllText(txtAsset.ToString(), jsonData);
+	}
 }

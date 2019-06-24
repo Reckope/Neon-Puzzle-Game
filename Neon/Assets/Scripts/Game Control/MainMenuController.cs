@@ -57,4 +57,9 @@ public class MainMenuController : MonoBehaviour
 			menuOptions[i].SetActive(false);
 		}
 	}
+
+	public void ExitGame()
+	{
+		Application.Quit();
+	}
 }
